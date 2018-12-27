@@ -80,7 +80,7 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:leafs99/leafs99.github.io.git
-  branch: master
+  branch: blog
 
 # Disqus Comments Shortname
 disqus_shortname: your shortname
