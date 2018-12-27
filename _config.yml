@@ -81,3 +81,6 @@ deploy:
   type: git
   repo: git@github.com:leafs99/leafs99.github.io.git
   branch: master
+
+# Disqus Comments Shortname
+disqus_shortname: leafs99
