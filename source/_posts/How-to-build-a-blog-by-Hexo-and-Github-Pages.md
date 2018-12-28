@@ -1,5 +1,5 @@
 ---
-title: How to build a blog by Hexo and Github Pages
+title: Build Blog by Hexo and Github Pages
 date: 2018-12-27 19:44:45
 tags:
 ---
