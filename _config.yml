@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: leafs99's blog
+title: 云深不知处
 subtitle:
 description:
 keywords:
@@ -50,8 +50,8 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
-  order_by: -date
+  per_page: 1
+  order_by: date
 
 # Category & Tag
 default_category: uncategorized
