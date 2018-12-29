@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="leafs99&#39;s blog">
+<meta property="og:title" content="云深不知处">
 <meta property="og:url" content="http://leafs99.github.io/index.html">
-<meta property="og:site_name" content="leafs99&#39;s blog">
+<meta property="og:site_name" content="云深不知处">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leafs99&#39;s blog">
+<meta name="twitter:title" content="云深不知处">
 
 
 
@@ -95,7 +95,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -121,7 +121,7 @@
 
 
 
-  <title>leafs99's blog</title>
+  <title>云深不知处</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">leafs99's blog</span>
+        <span class="site-title">云深不知处</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -196,6 +196,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -229,383 +239,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leafs99.github.io/2018/12/28/Linux-Study-One/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="leafs99">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leafs99's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/28/Linux-Study-One/" itemprop="url">（一）文件及目录管理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T17:20:37+08:00">
-                2018-12-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="常见处理目录的命令"><a href="#常见处理目录的命令" class="headerlink" title="常见处理目录的命令"></a>常见处理目录的命令</h3><ul>
-<li>ls</li>
-<li>cd</li>
-<li>pwd</li>
-<li>mkdir</li>
-<li>rmdir</li>
-<li>cp</li>
-<li>rm</li>
-<li>mv</li>
-</ul>
-<p>note: <em>man</em> 命令可用来查看各个命令的使用文档，如：<br><code>man cp</code></p>
-<h3 id="ls-列出目录"><a href="#ls-列出目录" class="headerlink" title="ls (列出目录)"></a>ls (列出目录)</h3><p><code>ls [directory_name]</code></p>
-<ul>
-<li>-a: 连同隐藏文件一起列出来</li>
-<li>-l: 列出目录内文件的详细信息</li>
-<li>-d: 只列出这个目录本身，而不是它的子文件们</li>
-</ul>
-<p><code>ls -al ~</code></p>
-<p><em>这个命令会列出父目录下的所有文件（含属性和隐藏项）</em></p>
-<h3 id="cd（切换目录）"><a href="#cd（切换目录）" class="headerlink" title="cd（切换目录）"></a>cd（切换目录）</h3><p>cd: change directory</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir go</span><br><span class="line">cd /root/go</span><br><span class="line">cd ./go</span><br><span class="line">cd ~</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
-<h3 id="pwd（显示目前所在目录）"><a href="#pwd（显示目前所在目录）" class="headerlink" title="pwd（显示目前所在目录）"></a>pwd（显示目前所在目录）</h3><p><code>pwd [-P]</code></p>
-<ul>
-<li>-P：(大写)，显示出确实的路径，而不是连结路径(link)</li>
-</ul>
-<h3 id="mkdir（创建新目录）"><a href="#mkdir（创建新目录）" class="headerlink" title="mkdir（创建新目录）"></a>mkdir（创建新目录）</h3><p><code>mkdir [-mp] [directory name]</code></p>
-<ul>
-<li>-m: 配置目录的权限，而不是默认权限（umask）的 755</li>
-<li>-p: 直接递归创建多层目录</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir test</span><br><span class="line">mkdir -m 711 test2</span><br><span class="line">mkdir -p test1/test2/test3</span><br></pre></td></tr></table></figure>
-<h3 id="rmdir（删除空目录）"><a href="#rmdir（删除空目录）" class="headerlink" title="rmdir（删除空目录）"></a>rmdir（删除空目录）</h3><p><code>rmdir [-p] [directory name]</code></p>
-<ul>
-<li>-p: 连同上一级目录也删除</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rmdir test</span><br><span class="line">rmdir -p test1/test2/test3</span><br></pre></td></tr></table></figure>
-<h3 id="cp（复制文件或目录）"><a href="#cp（复制文件或目录）" class="headerlink" title="cp（复制文件或目录）"></a>cp（复制文件或目录）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp [-adfilprsu] source destination</span><br><span class="line">cp [-adfilprsu] source1 source2 source3 ... directory</span><br></pre></td></tr></table></figure>
-<ul>
-<li>-a: 相当于 -pdr，如果是连结档就复制连结档的属性，如果是文件就连同文件一起复制，如果是目录就连同所有子目录一起复制</li>
-<li>-d: 若来源是连结档，就复制连结档属性而非文件本身</li>
-<li>-f: 若目标文件已经存在并且无法开启，则移除后再尝试一次</li>
-<li>-i: 若目标档已经存在时，在覆盖时会先询问是否进行下去(常用)</li>
-<li>-l: 进行硬式连结(hard link)的连结档创建，而非复制文件本身</li>
-<li>-p: 连同文件的属性一起复制过去</li>
-<li>-r: 递归持续复制，用于目录的复制行为(常用)</li>
-<li>-s: 复制成为符号连结档(symbolic link)，亦称捷径文件</li>
-<li>-u: destination 比 source 旧的时候才升级 destination</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.bashrc /tmp/bashrc</span><br><span class="line">cp -i ~/.bashrc /tmp/bashrc</span><br></pre></td></tr></table></figure>
-<h3 id="rm（移除文件或目录）"><a href="#rm（移除文件或目录）" class="headerlink" title="rm（移除文件或目录）"></a>rm（移除文件或目录）</h3><p><code>rm [-fir] [file/directory]</code></p>
-<ul>
-<li>-f: 忽略不存在的文件，全部删除</li>
-<li>-i: 删除前会询问</li>
-<li>-r: 递归删除，常用于目录删除中</li>
-</ul>
-<h3 id="mv（移动文件与目录或修改名称）"><a href="#mv（移动文件与目录或修改名称）" class="headerlink" title="mv（移动文件与目录或修改名称）"></a>mv（移动文件与目录或修改名称）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv [-fiu] source destination</span><br><span class="line">mv [-fiu] source1 source2 source3 ... directory</span><br></pre></td></tr></table></figure>
-<ul>
-<li>-f: 忽略不存在的文件，全部移动</li>
-<li>-i: 移动前会询问</li>
-<li>-u: 递归移动，常用于目录这个移动</li>
-</ul>
-<h3 id="文件内容查看命令"><a href="#文件内容查看命令" class="headerlink" title="文件内容查看命令"></a>文件内容查看命令</h3><ul>
-<li>cat</li>
-<li>tac</li>
-<li>nl</li>
-<li>more</li>
-<li>less</li>
-<li>head</li>
-<li>tail</li>
-</ul>
-<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>由第一行开始显示文件内容</p>
-<p><code>cat [-benstuv]</code></p>
-<ul>
-<li>-b: 列出行号，仅显示非空白行的行号</li>
-<li>-E: 将结尾的断行字节 $ 显示出来</li>
-<li>-n: 列印出行号，连同空白行也有行号</li>
-<li>-T: 将 [tab] 按键以 ^I 显示出来</li>
-<li>-v: 列出一些看不出来的特殊字符</li>
-</ul>
-<h3 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h3><p>与 cat 命令相反，从文件最后一行开始显示</p>
-<h3 id="nl"><a href="#nl" class="headerlink" title="nl"></a>nl</h3><p>显示行号</p>
-<p><code>nl [-bnw] [file name]</code></p>
-<ul>
-<li>-b ：指定行号指定的方式，主要有两种</li>
-<li>-b a ：表示不论是否为空行，也同样列出行号(类似 cat -n)</li>
-<li>-b t ：如果有空行，空的那一行不要列出行号(默认值)</li>
-<li>-n ：列出行号表示的方法，主要有三种</li>
-<li>-n ln ：行号在荧幕的最左方显示</li>
-<li>-n rn ：行号在自己栏位的最右方显示，且不加 0</li>
-<li>-n rz ：行号在自己栏位的最右方显示，且加 0</li>
-<li>-w ：行号栏位的占用的位数</li>
-</ul>
-<h3 id="more"><a href="#more" class="headerlink" title="more"></a>more</h3><p>一页一页翻动</p>
-<p><code>more [file name]</code></p>
-<ul>
-<li>空白键 (space)：代表向下翻一页</li>
-<li>Enter         ：代表向下翻『一行』</li>
-<li>/字串         ：代表在这个显示的内容当中，向下搜寻『字串』这个关键字</li>
-<li>:f            ：立刻显示出档名以及目前显示的行数</li>
-<li>q             ：代表立刻离开 more ，不再显示该文件内容</li>
-<li>b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管线无用</li>
-</ul>
-<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p><code>less [file name]</code></p>
-<ul>
-<li>空白键    ：向下翻动一页</li>
-<li>[pagedown]：向下翻动一页</li>
-<li>[pageup]  ：向上翻动一页</li>
-<li>/字串     ：向下搜寻『字串』的功能</li>
-<li>?字串     ：向上搜寻『字串』的功能</li>
-<li>n         ：重复前一个搜寻 (与 / 或 ? 有关！)</li>
-<li>N         ：反向的重复前一个搜寻 (与 / 或 ? 有关！)</li>
-<li>q         ：离开 less 这个程序</li>
-</ul>
-<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><p>取出文件前几行</p>
-<p><code>head [-n number] [file name]</code></p>
-<ul>
-<li>-n ：后面接数字，代表显示几行的意思</li>
-</ul>
-<p>默认是前 10 行。</p>
-<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><p>取出文件后几行</p>
-<p><code>tail [-n number] [file name]</code></p>
-<ul>
-<li>-n ：后面接数字，代表显示几行的意思</li>
-<li>-f ：表示持续侦测后面所接的档名，要等到按下[ctrl]-c才会结束tail的侦测</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leafs99.github.io/2018/12/27/How-to-build-a-blog-by-Hexo-and-Github-Pages/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="leafs99">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leafs99's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/How-to-build-a-blog-by-Hexo-and-Github-Pages/" itemprop="url">Build Blog by Hexo and Github Pages</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-27T19:44:45+08:00">
-                2018-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Build-Blog"><a href="#Build-Blog" class="headerlink" title="Build Blog"></a>Build Blog</h2><p>There are some relative links:</p>
-<ul>
-<li><a href="https://lihthub.github.io/2017/09/19/blogging-with-hexo/#Github-Pages" target="_blank" rel="noopener">主要参考</a></li>
-<li><a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">官方文档</a></li>
-<li><a href="https://www.lovebxm.com/2018/06/24/hexo-github-blog/#%E5%85%B3%E8%81%94-Hexo-%E4%B8%8E-GitHub" target="_blank" rel="noopener">参考</a></li>
-</ul>
-<h2 id="Start-Writing"><a href="#Start-Writing" class="headerlink" title="Start Writing"></a>Start Writing</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://leafs99.github.io/2018/12/27/Start/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -615,7 +248,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="leafs99's blog">
+      <meta itemprop="name" content="云深不知处">
     </span>
 
     
@@ -716,6 +349,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -768,6 +405,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
 
           </nav>
 
@@ -788,6 +434,11 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
       
 
     </div>
@@ -829,11 +480,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
