@@ -107,6 +107,12 @@ mv [-fiu] source1 source2 source3 ... directory
 - -i: 移动前会询问
 - -u: 递归移动，常用于目录这个移动
 
+### touch（创建文件）
+
+```
+touch f1.js
+```
+
 ### 文件内容查看命令
 
 - cat
