@@ -1,7 +1,7 @@
 ---
 title: VSCode 中实时显示 .md 文件结果
 date: 2019-08-01 16:28:03
-tags:
+tags: Markdown
 ---
 
 VSCode 原生支持高亮 Markdown 的语法，想要一边编辑一边预览，有两种方法：
